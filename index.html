@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+            min-height: 90vh;
+            background-color: chartreuse;
+        }
+        button{
+            padding:15px ;
+            background: transparent;
+            border:2px solid ;
+            color:green;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+        }
+        button:hover{
+            background-color:black;
+            color: black;
+            border: 5px solid gold;  
+            color: red;
+            border-radius: 20%;
+            display: flex;
+            text-align: center;
+        }
+        button:active{
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+     <button id="btn"> <h2>click me</h2>
+        <img src="" alt="" height="">
+     </button>
+    <script>
+        let btn=document.getElementById("btn")
+        function randomColor(){
+            let letters="0123456789ABCDEF"
+            let color="#"
+            for(i=0;i<6;i++){
+                color+=letters[Math.floor(Math.random()*16)]
+            }
+            return color;   
+        }
+        btn.addEventListener("click",()=>{
+            document.body.style.backgroundColor = randomColor()
+        });
+    </script>
+</body>
+</html>
